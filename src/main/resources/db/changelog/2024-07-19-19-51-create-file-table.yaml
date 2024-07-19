@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: golovin
+      changes:
+        - createTable:
+            tableName: file
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: path
+                  type: varchar(1024)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: md5
+                  type: varchar(32)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: extension
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: weight
+                  type: bigint
+                  constraints:
+                    nullable: false
